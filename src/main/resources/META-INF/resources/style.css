@@ -8,14 +8,17 @@
     display: flex;
     width: 500px;
     min-height: 500px;
-    border: 1px solid black;
+    border: 2px solid rgb(144, 144, 144);
     flex-direction: column;
+    border-radius: 0 8px 8px 0;
 
 }
 .sidebar{
     width: 300px;
-    border: 1px solid black;
+    border: 2px solid rgb(144, 144, 144);
     min-height: 500px;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
 }
 .main-title{
     padding-top: 5px;
