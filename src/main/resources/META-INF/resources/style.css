@@ -1,8 +1,8 @@
 .wrapper{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;     
+    align-items: stretch;  
+    margin: auto; 
+    width: 800px; 
   }
 .main{
     display: flex;
@@ -44,4 +44,39 @@
 .main-box{
     display: flex;
     margin-top: auto;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+}
+.circle{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.circle-done{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: inline-flex;                                                                                                                                                                                                                              
+    justify-content: center;                                                                                                                                                                                                                           
+    align-items: center;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: rgb(244, 234, 46);
+    cursor: pointer;
+}
+.circle-done::after{
+    content: "×";
+}
+#tasks-list{ 
+    list-style: none;
+    padding: 20px;
 }

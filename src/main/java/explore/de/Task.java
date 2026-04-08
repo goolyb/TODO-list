@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 
 @Entity 
 public class Task extends PanacheEntity {
-    public String title;
+    public String name;
     public Boolean completed = false;
 
 }
