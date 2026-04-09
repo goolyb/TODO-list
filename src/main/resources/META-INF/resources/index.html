@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <title>TODO List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <style>
     
   </style>
@@ -11,16 +14,24 @@
 <body>
     <div class="wrapper">
         <div class="sidebar">
-            <h1 class="main-title">List</h1>
+            <h1 class="sidebar-title">List</h1>
+            <ul id="tasks-list">
+                popa
+            </ul>
+            <div class="sidebar-box">
+                <div class="done-list">
+                    <span class="sidebar-dot"></span>
+                    Done tasks
+                </div> 
+                <button class="tasks-list">Add new list</button>    
+            </div>
         </div>
         <div class="main">
             <h1 class="main-title">Tasks</h1>
-            <ul id="tasks-list">
-
-            </ul>
+            <ul id="tasks-name"></ul>
             <div class="main-box">
                 <input class="input-box" type="text" placeholder="New task..." />
-                <button class="button-add">Add</button>
+                <button class="button-add">Add new task</button>
             </div>
         </div>    
     </div>

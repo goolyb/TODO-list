@@ -15,7 +15,7 @@ addBtn.addEventListener('click', function() {
         console.log("All tasks: ", allTasks);
         console.log(text);
         input.value = "";
-        const list = document.getElementById('tasks-list');
+        const list = document.getElementById('tasks-name');
         list.innerHTML = ""                                // cleares the input list before add
         allTasks.forEach(task => {
             const taskItem = document.createElement('li'); 
@@ -28,7 +28,8 @@ addBtn.addEventListener('click', function() {
                 taskItem.remove();
                 fetch(`/tasks/${task.id}`, {
                     method: 'DELETE',
-                })                                                                                                                                                                                                                     
+                }) 
+            });                                                                                                                                                                                                                    
             circle.addEventListener('click', function(){
                 if (circle.className == "circle"){
                     circle.className = "circle-done"
@@ -38,7 +39,6 @@ addBtn.addEventListener('click', function() {
                     circle.parentElement.style.textDecoration = "none"
                 }            
                 }); 
-            });
         });
     });
 });
@@ -49,7 +49,7 @@ fetch('/tasks')
         console.log("All tasks: ", allTasks);
         console.log(text);
         input.value = "";
-        const list = document.getElementById('tasks-list');
+        const list = document.getElementById('tasks-name');
         list.innerHTML = ""                                 
         allTasks.forEach(task => { 
             const taskItem = document.createElement('li'); 
@@ -62,8 +62,9 @@ fetch('/tasks')
                 taskItem.remove();
                 fetch(`/tasks/${task.id}`, {
                     method: 'DELETE',
-                })                                                                                                                                                                                                                 
-            circle.addEventListener('click', function(){
+                })
+            });                                                                                                                                                                                                                 
+            circle.addEventListener('click', function(){   
                 if (circle.className == "circle"){
                     circle.className = "circle-done"
                     circle.parentElement.style.textDecoration = "line-through"
@@ -72,6 +73,5 @@ fetch('/tasks')
                     circle.parentElement.style.textDecoration = "none"
                 }            
                 });                
-            });
         });
     });
